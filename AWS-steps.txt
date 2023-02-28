@@ -1,0 +1,51 @@
+Step 1:
+ Firstly make the any instance which give you many option like:
+    i) ubuntu 
+    ii) window
+
+step 2:
+ After select the machine you need to create a key pair for authentication  in the pem format
+
+step 3:
+ After the key pair file download in pem format then use puttygen to convert the pem to ppk and this is only work of puttygen
+
+step 4:
+Now putty came to role :  putty is which help to connect us to the our cloud server which we created in ec2 instance. Now there are some detail we need to fill up in putty 
+ i) Host name: will be the Public IPv4 address in ec2 instance which we created
+
+ii) give Name of the  session in Saved Sessions field of putty
+
+iii) give in the data field of putty and go in login detail where we need to Auto-login username:  will find when we connect our instance and go in ec2 instance connect we find user name what it is.
+
+iv) now go in ssh field of putty and where we find a field auth-credentials then we click on auth we further find a field private key file where we need to upload our ppk which we convert from pem by using the puttygen.
+
+v) after uploading the ppk file go back to session-logging detail and save the detail and select over the name which you save and open and our ubuntu cloud ec2 instance is connected....
+
+Step 5:
+	now as we are in our linux server we need to upload our app to there for this we use winscp
+i) give the host name same as before will be the Public IPv4 address in ec2 instance 
+ii) give the user name same as before
+iii) now go in advance setting in winscp give in ssh and authentication and also need to give ppk file here also and after giving the key save and login....
+
+(sudo apt-get update)
+after install requiremnt.txt and packages
+
+Step 6: Go into security groupy in aws and create new security group and set :
+type = all the traffic
+source= anywhere
+
+step 7: right click on instance and go in security group and and select you security which you created.
+
+Step 8: after run the streamlit run app.py go to instance and connect>SSH client> Connect to your instacne using public DNS: link
+copy and link and paste:8080
+
+
+
+
+
+
+
+
+
+
+
